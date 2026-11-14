@@ -44,7 +44,7 @@ export default function Leads() {
 
     const loadLeads = async () => {
         try {
-            const res = await api.get("/leads")
+            const res = await api.get("/leads",{params:{limit:100}})
             setLeads(res.data.leads)
             setError("")
         } catch (err) {
@@ -121,6 +121,17 @@ export default function Leads() {
             setError(err.response?.data?.message || "Could not delete lead")
         }
     }
+
+    const handleConvert = async (lead) => {
+    if (!window.confirm("Convert " + lead.name + " to a customer?")) return
+
+    try {
+        await api.post("/customers/convert/" + lead._id)
+        await loadLeads()
+    } catch (err) {
+        setError(err.response?.data?.message || "Could not convert lead")
+    }
+}
 
     const handleEmail = async (lead) => {
         setEmailModal({ lead, text: "", loading: true, error: "" })
@@ -278,6 +289,15 @@ export default function Leads() {
                                             >
                                                 Delete
                                             </button>
+
+                                            {lead.status === "qualified" && (
+                                            <button
+                                                onClick={() => handleConvert(lead)}
+                                                className="bg-green-500/20 text-green-300 px-3 py-1 rounded transition duration-200 hover:bg-green-500 hover:text-white"
+                                            >
+                                                Convert
+                                            </button>
+                                        )}
                                         </td>
                                     </tr>
                                 ))}
