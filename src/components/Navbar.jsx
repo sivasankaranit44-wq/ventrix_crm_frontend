@@ -14,6 +14,7 @@ export default function Navbar() {
                 <h1 className="text-xl font-bold text-white">Ventrix AI Powered CRM</h1>
                 <NavLink to="/dashboard" className={linkClass}>Dashboard</NavLink>
                 <NavLink to="/leads" className={linkClass}>Leads</NavLink>
+                <NavLink to="/customers" className={linkClass}>Customers</NavLink>
             </div>
 
             <div className="flex items-center gap-4">
