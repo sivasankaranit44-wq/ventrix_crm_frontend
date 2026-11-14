@@ -21,16 +21,27 @@ password - Sankaran98
 **Adding the screenshots for the features**
 ### Login
 ![Login](screenshots/Login.png)
+### Register
 ![Register](screenshots/Register.png)
+### Qualfied to convert (lead status)
 ![qualified_to_convert](screenshots/qualified_to_convert.png)
+### Leads
 ![Leads](screenshots/Leads.png)
+## Leads Edit
 ![Lead_edit](screenshots/Lead_edit.png)
+### Delete
 ![delete](screenshots/delete.png)
+### Dashboard
 ![Dashboard](screenshots/Dashboard.png)
+### Customers page (who is converted)
 ![customers_page](screenshots/customers_page.png)
+### AI mail generation loading process
 ![AI_mail_generating](screenshots/AI_mail_generating.png)
+### Ai Mail generation
 ![AI_mail_generated](screenshots/Ai_mail_generated.png)
+### Add lead
 ![Add_Lead](screenshots/Add_Lead.png)
+### Add lead feature
 ![Add_Lead_Before_saving](screenshots/Add_Lead_before_saving.png)
 
 ## AI-Email content for one of the Lead
